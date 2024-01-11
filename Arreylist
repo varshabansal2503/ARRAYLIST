@@ -1,0 +1,74 @@
+ANS:1--Given an ArrayList of N lowercase characters. The task is to count the frequency of elements in the list.
+
+ANS:1 ---
+class Geeks
+{
+    // Function to insert element
+    public static void insert(ArrayList<Character> clist, char c)
+    {
+        clist.add(c);
+     
+         }
+    
+    // Function to count frequency of element
+    public static void freq(ArrayList<Character> clist, char c)
+    {
+        int count=0;
+        for(char ch : clist)
+        {
+            if(ch==c)
+            {
+                count++;
+            }
+        }
+     
+        if(count>0)
+        System.out.println( count);
+        else
+        System.out.println("Not Present");
+        
+    }
+
+ANS:2---  Given a matrix of size n x m, where every row and column is sorted in increasing order, and a number x. Find whether element x is present in the matrix or not.
+
+
+class Solution 
+{ 
+   	static boolean search(int matrix[][], int n, int m, int x) 
+	{  
+	  
+        if (matrix == null ||n == 0 || m == 0) {
+            return false;
+        }
+
+       
+
+     
+        int i= 0;
+        int j= m - 1;
+
+        while (i < n && j>= 0) 
+        {
+            if (matrix[i][j] == x)
+            {
+              
+                return true;
+            } 
+            else if (matrix[i][j]<x)
+            {
+             
+                i++;
+            } else 
+            {
+                
+                j--;
+            }
+        }
+
+       
+        return false;
+    }
+
+
+} 
+}
